@@ -1,0 +1,101 @@
+.footer {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+
+    :focus {
+    background-color: antiquewhite;
+}
+    input:hover {
+      border-color: blue ;
+      background-color: darkgrey;
+    }
+    input:invalid {
+      border-color: red;
+    }
+    textarea:hover {
+      border-color: blue;
+      background-color: darkgrey;
+    }
+
+    &-text {
+    border-radius: 8px;
+    height: 48px;
+    background-color: #F8F8FA;
+    }
+    &-message {
+      background-color: #F8F8FA;
+      height: 148px;
+      border-radius: 8px;
+    }
+  }
+  &__container {
+    display: grid;
+
+    @include footer-container;
+  }
+  &__img {
+  background-image: url(/src/styles/img/footer.png);
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat
+  }
+  &__title {
+    grid-area: footer__title;
+  }
+  &__text {
+    grid-area: footer__text;
+    margin-top: 24px;
+  }
+  &__contact {
+    display: grid;
+    grid-area: footer__contact;
+
+    // margin-bottom: 48px;
+    // @media (min-width: 744px) {
+    //   margin-bottom: 80px;
+    // }
+  }
+  &__information {
+    grid-area: footer__information;
+    margin-bottom: 24px;
+      &-title {
+    margin-bottom: 8px;
+    color: #9393A3;
+  }
+  }
+}
+
+.title__contacts {
+  margin-bottom: 48px;
+}
+
+input::placeholder {
+  color: #7E7E83;
+}
+
+
+  .button {
+    margin-top: 10px;
+    &-click {
+      width: 100%;
+      color: black;
+      text-decoration: none;
+      grid-area: button;
+      border-radius: 10px;
+
+      background-color: #F8F8FA;
+      height: 56px;
+      line-height: 56px;
+      text-align: center;
+      font-size: 16px;
+
+      &:hover {
+        background-color: gray;
+        color: bisque;
+      }
+    }
+  }
