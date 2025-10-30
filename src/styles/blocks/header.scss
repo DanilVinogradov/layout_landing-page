@@ -19,7 +19,7 @@
   }
   &__logo {
     @include header-logo;
-    @include header-icon-hover (transform, scale(1.2));
+    @include header-icon-hover (transform, scale($--transform-scale));
   }
 
   &__bottom {

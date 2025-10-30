@@ -9,11 +9,11 @@
 
   @include header-icon-hover (transform, scale(1.2));
 &--phone {
-  background-image: url(/phone__icon.png);
+  background-image: url(/src/styles/img/phoneIcon.svg);
 }
 
 &--menu {
-  background-image: url(/badger__menu.png);
+  background-image: url(/src/styles/img/burger.svg);
 }
 
 &--close {

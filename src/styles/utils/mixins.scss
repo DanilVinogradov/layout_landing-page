@@ -1,4 +1,6 @@
-
+$--Bcolor-button: #292929;
+$--Hcolor-button: #F8F8FA;
+$--transform-scale: 1.02;
 
 /* #region Animation */
 @mixin header-icon-hover($property,$toValue) {
@@ -140,16 +142,17 @@ $--color-basic: #292929;
 }
 
 @mixin main-img() {
-  height: 280px;
+  height: 60vw;
   background-size: cover;
+  background-position: center;
   margin-bottom: 24px;
 
-  @media (min-width: 744px) {
-    height: 600px;
-  }
+  // @media (min-width: 744px) {
+  //   height: 600px;
+  // }
 
   @media (min-width: 1260px) {
-    height: 324px;
+    height: 33vw;
   }
 }
 
@@ -225,7 +228,7 @@ $--color-basic: #292929;
 }
 
 @mixin brows-height {
-  height: 50vw;
+  height: 20vw;
 
   // @media (min-width: 744px) {
   //   height: 184px;
@@ -257,6 +260,26 @@ $--color-basic: #292929;
       "footer__information footer__information";
       grid-template-columns: 1fr 1fr;
     }
+
+    @media (min-width: 1260px) {
+      margin: 56px 73px 120px;
+      column-gap: 114px;
+
+      grid-template-areas:
+      "footer__title footer__text"
+      "footer__contact footer__information";
+      grid-template-columns: 1fr 1fr;
+    }
+}
+
+@mixin footer-form () {
+  font-weight: 400;
+  font-family: 'Space Mono';
+  font-size: 14px;
+
+  border: 1px solid #D5D7DE;
+
+  background-color: #F8F8FA;
 }
 
 /* #endregion */

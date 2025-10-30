@@ -36,21 +36,21 @@
     width: 100%;
     margin: 0;
 
-    @include header-icon-hover (transform, scale(1.1));
+    @include header-icon-hover (transform, scale($--transform-scale));
     &-phone {
       @include main-img;
 
-      background-image: url(/src/styles/img/SmartPhone.png);
+      background-image: url(/src/styles/img/SmartPhone.svg);
     }
     &-podes {
       @include main-img;
 
-      background-image: url(/src/styles/img/podes.png);
+      background-image: url(/src/styles/img/podes.svg);
     }
     &-ear {
       @include main-img;
 
-      background-image: url(/src/styles/img/EarStick.png);
+      background-image: url(/src/styles/img/EarStick.svg);
     }
     &-title {
       margin-bottom: 8px;

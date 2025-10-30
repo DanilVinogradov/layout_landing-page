@@ -1,33 +1,33 @@
+@import '../utils/mixins';
+
 .footer {
   &__form {
     display: flex;
     flex-direction: column;
     margin-top: 24px;
-
-    :focus {
-    background-color: antiquewhite;
-}
     input:hover {
       border-color: blue ;
-      background-color: darkgrey;
+      background-color: var($--Hcolor-button);
     }
     input:invalid {
-      border-color: red;
+      border: 2px solid red;
     }
     textarea:hover {
-      border-color: blue;
-      background-color: darkgrey;
+      border-color: #292929;
+      background-color: var($--Hcolor-button);
     }
 
     &-text {
     border-radius: 8px;
     height: 48px;
-    background-color: #F8F8FA;
+
+    @include footer-form;
     }
     &-message {
-      background-color: #F8F8FA;
       height: 148px;
       border-radius: 8px;
+
+      @include footer-form;
     }
   }
   &__container {
@@ -62,9 +62,18 @@
   &__information {
     grid-area: footer__information;
     margin-bottom: 24px;
+    align-content: flex-end;
       &-title {
     margin-bottom: 8px;
     color: #9393A3;
+  }
+  @media (min-width: 1260px) {
+    .footer__information {
+
+    }
+    .footer__information-string {
+      margin-bottom: 24px;
+    }
   }
   }
 }
@@ -82,20 +91,22 @@ input::placeholder {
     margin-top: 10px;
     &-click {
       width: 100%;
-      color: black;
+      color: #FFFFFF;
       text-decoration: none;
       grid-area: button;
-      border-radius: 10px;
 
-      background-color: #F8F8FA;
+      border: 2px solid #F0F1F4;
+      border-radius: 8px;
+
+      background-color: $--Bcolor-button;
       height: 56px;
       line-height: 56px;
       text-align: center;
       font-size: 16px;
 
       &:hover {
-        background-color: gray;
-        color: bisque;
+        background-color: $--Hcolor-button;
+        color: $--Bcolor-button;
       }
     }
   }
