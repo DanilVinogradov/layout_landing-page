@@ -52,11 +52,6 @@ $--border: 2px solid #F0F1F4;
 @mixin header-icon() {
   height: 24px;
   width: 24px;
-
-  @media (min-width:744px) {
-    height: 32px;
-    width: 32px;
-  }
 }
 
 @mixin header-icons-gap() {

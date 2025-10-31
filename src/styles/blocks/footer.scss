@@ -9,16 +9,17 @@
       border-color: $--Bcolor-button ;
       background-color: var($--Hcolor-button);
     }
-    input:invalid {
-      border: 2px solid red;
-    }
     textarea:hover {
       border-color: $--Bcolor-button;
     }
+    //     input:invalid {
+    //   border: 2px solid red;
+    // }
 
     &-text {
     border-radius: 8px;
     height: 48px;
+    padding-left: 10px;
 
     @include footer-form;
     &:hover {
@@ -28,6 +29,8 @@
     &-message {
       height: 148px;
       border-radius: 8px;
+      padding: 10px 10px;
+      resize: none;
 
       @include footer-form;
     }
@@ -66,13 +69,14 @@
     margin-bottom: 24px;
     align-content: flex-end;
       &-title {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     color: #9393A3;
+    text-decoration: none;
+    &:hover {
+    color: goldenrod;
+    transition: transform 300ms, color 300ms, background-color 300ms;
+    position: relative;
   }
-  @media (min-width: 1260px) {
-    .footer__information-string {
-      margin-bottom: 24px;
-    }
   }
   }
 }

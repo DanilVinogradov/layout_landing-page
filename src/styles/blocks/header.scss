@@ -1,6 +1,27 @@
 // @import './utils/mixins';
 
 .header {
+  &__phone-number {
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  color: #292929;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  pointer-events: none;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__icons:hover .header__phone-number,
+  .icon--phone:hover + .header__phone-number {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   box-sizing: border-box;
 
   height: 100vh;
@@ -28,6 +49,9 @@
 
   &__icons {
     display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
 
     @include header-icons-gap;
   }
