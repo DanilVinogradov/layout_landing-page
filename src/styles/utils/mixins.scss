@@ -1,6 +1,7 @@
 $--Bcolor-button: #292929;
 $--Hcolor-button: #F8F8FA;
 $--transform-scale: 1.02;
+$--border: 2px solid #F0F1F4;
 
 /* #region Animation */
 @mixin header-icon-hover($property,$toValue) {
@@ -90,7 +91,6 @@ $--transform-scale: 1.02;
 
 
 /* #region menu */
-$--color-basic: #292929;
 
 
 @mixin menu-top-bar() {
@@ -262,7 +262,6 @@ $--color-basic: #292929;
     }
 
     @media (min-width: 1260px) {
-      margin: 56px 73px 120px;
       column-gap: 114px;
 
       grid-template-areas:
